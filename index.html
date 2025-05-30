@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>HellSan — hcunion.net</title>
+    <link rel="icon" href="img/avatar.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <canvas id="bg-canvas"></canvas>
+    <img src="img/HC.png" class="background-logo" id="bg-logo" alt="Background Logo" />
+    <div class="container">
+      <img src="img/avatar.jpg" alt="avatar" class="avatar" />
+      <h1>HellSan</h1>
+      <p>Sweeter than sugar than sweet.</p>
+      <div class="dev-encart">
+        <div class="dev-title">Dev</div>
+        <div class="dev-content">
+          <div class="tags">
+            <span>C/C++</span>
+            <span>Python</span>
+            <span>Java (Beginner)</span>
+            <span>HTML-CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+      </div>
+      <div class="lang-encart">
+        <div class="dev-title">Lang</div>
+        <div class="dev-content">
+          <div class="tags">
+            <span>French (Native)</span>
+            <span>English (C2)</span>
+            <span>Spanish (B1)</span>
+            <span>Japanese (A1)</span>
+          </div>
+        </div>
+      </div>
+      <a href="https://github.com/HellSanGH" target="_blank" class="contact-btn github-btn">GitHub</a>
+      <button class="contact-btn discord-btn" onclick="copyToClipboard('hellsan_')">Discord : hellsan_</button>
+      <button class="contact-btn email-btn" onclick="copyToClipboard('hellsanhc@gmail.com')">Email : hellsanhc@gmail.com</button>
+      <!-- le copy to clipboard est dans views.js-->
+      <p>My homemade personal page.</p>
+    </div>
+    <footer>© 2025 hcunion.net. Made with 🍑 by HellSan</footer>
+    <div id="music-player">
+      <div class="music-player-wrapper">
+        <div class="music-player">
+          <div class="track-info">
+            <span id="track-name">No track playing</span>
+          </div>
+          <div class="controls">
+            <button id="prev-btn">
+              <img src="icons/skip-back.svg" alt="Previous" />
+            </button>
+            <button id="play-btn">
+              <img id="play-icon" src="icons/play.svg" alt="Play" />
+            </button>
+            <button id="next-btn">
+              <img src="icons/skip-forward.svg" alt="Next" />
+            </button>
+            <button id="shuffle-btn">
+              <img src="icons/shuffle.svg" alt="Shuffle" />
+            </button>
+            <button id="repeat-btn">
+              <img src="icons/repeat.svg" alt="Repeat" />
+            </button>
+            <button id="volume-btn">
+              <img id="volume-icon" src="icons/volume-1.svg" alt="Volume" />
+            </button>
+          </div>
+          <div class="progress-volume">
+            <input type="range" id="progress" value="0" max="100" />
+            <input type="range" id="volume" min="0" max="1" step="0.01" value="1" />
+          </div>
+          <div class="music-list" id="music-list"></div>
+          <audio id="audio"></audio>
+        </div>
+      </div>
+    </div>
+    <div id="view-counter" class="tooltip-container">
+      <img src="icons/eye.svg" alt="views" class="eye-icon" />
+      <span id="view-count">0</span>
+      <div class="tooltip">Profile Views (Yes you can boost this count by spamming the page)</div>
+    </div>
+    <script src="js/bg.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/music.js"></script>
+    <script src="js/drag-player.js"></script>
+    <script src="js/views.js"></script>
+  </body>
+</html>
